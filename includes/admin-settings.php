@@ -37,18 +37,28 @@ class Admin_Settings {
     }
 
     public static function render_settings_page() {
-        // Check if settings were updated.
-        if ( isset( $_GET['settings-updated'] ) && 'true' === sanitize_text_field( wp_unslash( $_GET['settings-updated'] ) ) ) {
-            echo '<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">
-                    <p><strong>' . esc_html__( 'Settings have been updated.', 'prime-script' ) . '</strong></p>
-                  </div>';
+        // Check if form was submitted and verify nonce.
+        if ( isset( $_POST['primescript_nonce'] ) ) {
+            if ( wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['primescript_nonce'] ) ), 'primescript_save_settings' ) ) {
+                // Settings updated notice.
+                if ( isset( $_GET['settings-updated'] ) && 'true' === sanitize_text_field( wp_unslash( $_GET['settings-updated'] ) ) ) {
+                    echo '<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">
+                            <p><strong>' . esc_html__( 'Settings have been updated.', 'prime-script' ) . '</strong></p>
+                          </div>';
+                }
+            } else {
+                // Nonce verification failed.
+                wp_die( esc_html__( 'Nonce verification failed. Please try again.', 'prime-script' ) );
+            }
         }
     
         ?>
         <div class="wrap">
             <h1><?php esc_html_e( 'PrimeScript Settings', 'prime-script' ); ?></h1>
+            <?php settings_errors( ); ?>
             <form method="post" action="options.php">
                 <?php
+                wp_nonce_field( 'primescript_save_settings', 'primescript_nonce' );
                 // Output nonce, action, and option fields for the settings page.
                 settings_fields( 'primescript_settings' );
                 do_settings_sections( 'primescript_settings' );
