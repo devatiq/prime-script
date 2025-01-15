@@ -1,5 +1,5 @@
 === PrimeScript - Insert Header and Footer Script ===
-Contributors: supreoxlimited, supreox
+Contributors: supreoxltd
 Tags: header scripts, footer scripts, inject scripts, custom scripts
 Requires at least: 6.0
 Tested up to: 6.7
@@ -53,10 +53,7 @@ Yes, it can be activated on individual sites within a WordPress multisite networ
 = 1.0.0 =
 This is the initial release of PrimeScript. No upgrade required.
 
-== Screenshots ==
 
-1. **Settings Page**  
-   The settings page where you can insert header and footer scripts.
 
 == License ==
 
