@@ -4,8 +4,8 @@
  * Description: Allows users to inject header and footer scripts via a settings page.
  * Version: 1.0.0
  * Plugin URI: https://github.com/devatiq/prime-script
- * Author: ABCPlugin
- * Author URI: https://abcplugin.com/
+ * Author: SupreoX Limited
+ * Author URI: https://supreox.com/
  * Text Domain: prime-script
  * Domain Path: /languages
  * License: GPL v2 or later
