@@ -3,8 +3,9 @@
  * Plugin Name: PrimeScript - Insert Header and Footer Script
  * Description: Allows users to inject header and footer scripts via a settings page.
  * Version: 1.0.0
- * Author: SupreoX Limited
- * Author URI: https://supreox.com
+ * Plugin URI: https://github.com/devatiq/prime-script
+ * Author: ABCPlugin
+ * Author URI: https://abcplugin.com/
  * Text Domain: prime-script
  * Domain Path: /languages
  * License: GPL v2 or later

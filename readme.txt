@@ -1,5 +1,5 @@
 === PrimeScript - Insert Header and Footer Script ===
-Contributors: supreoxltd
+Contributors: abcplugins
 Tags: header scripts, footer scripts, inject scripts, custom scripts
 Requires at least: 6.0
 Tested up to: 6.7
